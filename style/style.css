@@ -1,0 +1,360 @@
+@font-face {
+  font-family: 'ShadowsIntoLight';
+  src: url('../fonts/ShadowsIntoLight.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+}
+
+html {
+    min-height: 100%;
+}
+body {
+    font-family: 'ShadowsIntoLight';
+    position: relative;
+    text-align: center;
+    min-height: 100%;
+    min-width: 1200px;
+}
+
+/* Button */
+
+.btn{
+    font-family: 'ShadowsIntoLight';
+    background-color: #e41f25;
+    color: #fff;
+    font-size: 16px;
+    border: 5px solid #000;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .2s;
+}
+.btn-new-game {
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 25%;
+}
+.btn:hover {
+    color: #000;
+}
+.btn:active{
+    background-color: #a31620;
+}
+.btn-start {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -60px;
+    width: 120px;
+    height: 70px;
+    border: 3px solid #792729;
+    border-radius: 10px;
+}
+
+/* TIMER */
+
+.timer-section {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    right: 150px;
+    width: 200px;
+    margin: 5px auto;
+    min-height: 70px;
+    font-size: 30px;
+    color: #000;
+}
+.timer-section span:first-child {
+    font-size: 20px;
+}
+.timer {
+    font-size: 30px;
+    color: #000;
+    border: 2px solid #000;
+}
+/* Board  */
+
+.board {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    text-align: left;
+}
+.guide {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+.guide h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 25px;
+    text-align: center;
+}
+.guide p {
+    margin-bottom: 5px;
+    color: #494949;
+    font-size: 16px;
+}
+.guide ol {
+    padding-left: 19px;
+    color: #494949;
+}
+.guide ol li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+.title {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #e41f25;
+}
+
+.field {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.field-for-10 {
+    width: 700px;
+    margin: 0 auto;
+}
+.field-for-18 {
+    width: 840px;
+    margin: 0 auto;
+}
+
+.info {
+    width: 30%;
+    float: right;
+    margin-right: 20%;
+    text-align: center;
+}
+
+.info h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.info input {
+    height: 25px;
+    width: 250px;
+    margin-bottom: 15px;
+    font-family: 'ShadowsIntoLight';
+    border-radius: 10%;
+}
+
+/* Card on the field */
+
+.card {
+    position: relative;
+    height: 177px;
+    width: 120px;
+    margin: 10px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    opacity: 1;
+    transition: transform .5s, opacity 1.2s;
+}
+.card-shirt {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width: 100%;
+}
+.card-face {
+    display: flex;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    transform: rotateY(180deg);
+    border: 3px solid #737373;
+}
+.card-face div {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    background: url(../images/sprites.png);
+}
+.shirt-style-1 {
+    background-image: url(../images/back.png);
+    background-size: 100%;
+    border: 1px solid #000;
+}
+.shirt-style-2 {
+    background-image: url(../images/back2.png);
+    background-size: 100%;
+    border: 1px solid #000;
+}
+.shirt-style-3 {
+    background-image: url(../images/back3.png);
+    background-size: 100%;
+    border: 1px solid #000;
+}
+.turn {
+    transform: rotateY(180deg);   
+}
+
+/* Modal windows */
+
+.overlay {
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,.85);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -400px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 800px;
+    height: 400px;
+    text-align: center;
+}
+.popup h2 {
+    height: 70px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1;
+    padding-top: 15px;
+}
+.menu {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.menu > div{
+    width: 50%;
+}
+.menu h3 {
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+/*Style card on the settings*/
+.card-styles {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.card-style {
+    height: 106px;
+    width: 75px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    margin-right: 5px;
+    background-size: 100%;
+}
+.card-style:nth-child(1) {
+    background-image: url(../images/back.png);
+}
+.card-style:nth-child(2) {
+    background-image: url(../images/back2.png);
+}
+.card-style:nth-child(3) {
+    background-image: url(../images/back3.png);
+}
+.card-style:hover {
+    border: 3px solid #000;
+    border-radius: 5%;
+}
+.card-style.active {
+    border: 3px solid #000;
+    border-radius: 0;
+}
+
+.difficulties {
+    width: 200px;
+    margin: 0 auto;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #000;
+}
+.difficulty {
+    padding: 12px;
+    background-color: #feffbe;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: .2s;
+}
+.difficulty:hover {
+    background-color: #a7ffba;
+}
+.difficulty.active {
+    background-color: #34c954;
+}
+
+/*Style table of records*/
+
+.tableOfRecords {
+    position: absolute;
+    top: 100px;
+    left: 400px;
+}
+
+.tableOfRec {
+    border: 1px solid #000;
+    width: 600px;
+    border-collapse: collapse;
+}
+
+.tableOfRec td {
+    border: 1px solid #000;
+    height: 30px;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.none {
+    display: none;
+}
+
+/* Animation */
+
+.show-table {
+    animation: bounce 1s;
+}
+
+.show-anim {
+    display: block;
+    animation: bounce 1s;
+}
+
+@keyframes bounce {
+    0% {transform: translateY(-2000px);}
+    70% {transform: translateY( 30px);}
+    90% {transform: translateY(-10px);}
+    100% {transform: translateY( 0px);}
+}

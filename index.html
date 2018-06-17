@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+  <title>Match-match game</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+
+<!-- Rules of games -->
+<button class="btn btn-new-game">Play</button>
+    <div class="timer-section">
+        <span>Time passed:</span>
+        <span class="timer">0:0</span>
+    </div>
+    <div class="board">
+        <div class="guide">
+            <h2>Hello, my friend! Do you want to play with me?</h2>
+            <img src="images/saw.jpg" width="200" height="200">
+            <h2>How to play</h2>
+            <ol>
+                <li>Press <span class="title">play</span> to start a new game.</li>
+                <li>Choose card style and difficulty.</li>
+                <li>Press <span class="title">start</span> to run a game.</li>
+                <li>Select two cards and if they match they will disappear. In other case they will turn back.</li>
+                <li>Your task is to find a pair for each card as soon as possible.</li>
+            </ol>
+        </div>
+        <div class="info">
+        	<h2>Information about user</h2>
+	        <form class="user">
+	        	<input type="text" placeholder="First name" required>
+	        	<input type="text" placeholder="Last name" required>
+	        	<input type="email" placeholder="Email" required>
+	        </form>
+        </div>
+    </div>
+
+<!-- Modal windows -->
+    <div class="overlay"></div>
+    <div class="popup">
+        <h2>Settings</h2>
+        <div class="menu">
+            <div>
+                <h3>Cards style</h3>
+                <ul class="card-styles">
+                    <li class="card-style active"></li>
+                    <li class="card-style"></li>
+                    <li class="card-style"></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Difficulty</h3>
+                <ul class="difficulties">
+                    <li class="difficulty">Easy (5 x 2)</li>
+                    <li class="difficulty active">Medium (6 x 3)</li>
+                    <li class="difficulty">Hard (8 x 3)</li>
+                </ul>
+            </div>
+        </div>
+        <button class="btn btn-start">Start</button>
+    </div>
+
+ <!-- Table of records -->
+    <div class="tableOfRecords none">
+        <table class="tableOfRec">
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Time</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+<script type="text/javascript" src="script/script.js"></script>
+
+</body>
+</html>
